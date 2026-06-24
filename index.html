@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PredictPro AI — Previsões de Futebol</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text">PredictPro<span class="logo-ai">AI</span></span>
+    </div>
+    <div class="live-badge">
+      <span class="pulse"></span>
+      AO VIVO
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">Inteligência Artificial + Futebol</div>
+    <h1 class="hero-title">
+      Previsões que<br/>
+      <span class="hero-accent">fazem sentido.</span>
+    </h1>
+    <p class="hero-sub">
+      A IA analisa os jogos de hoje e dá-te previsões objectivas.<br/>
+      Sem achismos. Só dados.
+    </p>
+    <button class="btn-primary" id="loadBtn" onclick="loadGames()">
+      Ver previsões de hoje
+    </button>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat">
+      <span class="stat-value" id="statGames">—</span>
+      <span class="stat-label">Jogos analisados</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-value">GPT-4</span>
+      <span class="stat-label">Modelo de IA</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-value">Football-Data</span>
+      <span class="stat-label">Fonte de dados</span>
+    </div>
+  </div>
+
+  <!-- LOADING -->
+  <div class="loading-state" id="loadingState" style="display:none">
+    <div class="spinner"></div>
+    <p>A IA está a analisar os jogos…</p>
+  </div>
+
+  <!-- ERROR -->
+  <div class="error-state" id="errorState" style="display:none">
+    <span class="error-icon">⚠️</span>
+    <p id="errorMsg">Algo correu mal. Tenta novamente.</p>
+    <button class="btn-ghost" onclick="loadGames()">Tentar de novo</button>
+  </div>
+
+  <!-- GAMES GRID -->
+  <section class="games-section" id="gamesSection" style="display:none">
+    <div class="section-header">
+      <h2 class="section-title">Previsões de Hoje</h2>
+      <button class="btn-ghost" onclick="loadGames()">↻ Actualizar</button>
+    </div>
+    <div class="games-grid" id="gamesGrid"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>PredictPro AI · Feito em Angola 🇦🇴 · Apenas para entretenimento</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
