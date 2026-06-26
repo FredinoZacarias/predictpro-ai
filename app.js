@@ -3,7 +3,7 @@
 // Troca esta URL pela URL do teu Render depois
 // =============================================
 
-const API_URL = "https://predictpro-api.onrender.com"; // ← MUDAR para teu backend Render
+const API_URL = "https://predictpro-api-nnre.onrender.com"; // ← MUDAR para teu backend Render
 
 // ---------- Estado ----------
 let isLoading = false;
